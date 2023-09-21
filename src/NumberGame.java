@@ -9,7 +9,6 @@ public class NumberGame {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
-
         do {
             int randNum = (random.nextInt(100 - 1 + 1) + 1);
             int attempts = 5;
@@ -33,7 +32,7 @@ public class NumberGame {
             System.out.print("Do you want to continue?(y/n): ");
             exit = sc.next();
         } while (exit.charAt(0) == 'y' || exit.charAt(0) == 'Y');
-        sc.close();
         System.out.println("Score: " + score);
+        sc.close();
     }
 }
