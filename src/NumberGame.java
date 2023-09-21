@@ -9,6 +9,7 @@ public class NumberGame {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
+
         do {
             int randNum = (random.nextInt(100 - 1 + 1) + 1);
             int attempts = 5;
