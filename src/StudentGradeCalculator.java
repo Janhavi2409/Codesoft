@@ -8,7 +8,7 @@ public class StudentGradeCalculator {
         String grade;
         double totalMarks = 0;
         for (int i = 1; i <= subNum; i++) {
-            System.out.print("Enter marks in subject " + i + ": ");
+            System.out.print("Enter marks in subject " + i + " (out of 100): ");
             int marks = sc.nextInt();
             totalMarks += marks;
         }
