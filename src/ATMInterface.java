@@ -47,7 +47,7 @@ class ATM {
     public void run() {
         while (true) {
             displayMenu();
-            System.out.print("Select an option (1/2/3/4): ");
+            System.out.print("Select an option: ");
             int choice = sc.nextInt();
 
             switch (choice) {
@@ -55,7 +55,7 @@ class ATM {
                     System.out.print("Enter the amount to withdraw: ");
                     double withdrawAmount = sc.nextDouble();
                     if (account.withdraw(withdrawAmount)) {
-                        System.out.println("Withdrawal successful. Amount: $" + withdrawAmount);
+                        System.out.println("Withdrawal successful. Amount: ₹" + withdrawAmount);
                     } else {
                         System.out.println("Withdrawal failed. Insufficient balance or invalid amount.");
                     }
@@ -64,14 +64,14 @@ class ATM {
                     System.out.print("Enter the amount to deposit: ");
                     double depositAmount = sc.nextDouble();
                     if (account.deposit(depositAmount)) {
-                        System.out.println("Deposit successful. Amount: $" + depositAmount);
+                        System.out.println("Deposit successful. Amount: ₹" + depositAmount);
                     } else {
                         System.out.println("Deposit failed. Invalid amount.");
                     }
                 }
                 case 3 -> {
                     double balance = account.checkBalance();
-                    System.out.println("Account Balance: $" + balance);
+                    System.out.println("Account Balance: ₹" + balance);
                 }
                 case 4 -> {
                     System.out.println("Thank you for using the ATM.");
